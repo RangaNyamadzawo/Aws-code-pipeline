@@ -59,7 +59,7 @@ resource "aws_route_table_association" "a" {
   subnet_id = aws_subnet.Pub-Subnet-1.id
   route_table_id = aws_route_table.first-vpc-RTB.id
 }
-/*
+
 # 6. Create Security Group to allow port 22,80,443
 resource "aws_security_group" "allow_web" {
   name = "allow_web_traffic"
@@ -146,4 +146,4 @@ resource "aws_instance" "app_server" {
 
 output "server-pub-ip" {
   value = aws_eip.one.public_ip
-}*/
+}
